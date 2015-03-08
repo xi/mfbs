@@ -1,0 +1,14 @@
+{
+  "name": "mfbs",
+  "version": "0.0.0",
+  "authors": [
+    "Tobias Bengfort <tobias.bengfort@gmx.net>"
+  ],
+  "description": "mother fucking bootstarp - a minimal CSS framework",
+  "main": "src/base.less",
+  "keywords": [
+    "css",
+    "less"
+  ],
+  "license": "GPL2+"
+}
