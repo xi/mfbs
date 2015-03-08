@@ -1,0 +1,84 @@
+html {
+    overflow-y: scroll;
+    background-color: @color-bg;
+}
+body {
+    color: @color-fg;
+    font-size: medium;
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 2em auto;
+    max-width: 40em;
+    padding: 0 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+a {
+    color: @color-link;
+    text-decoration: underline;
+
+    &:visited {
+        color: @color-link;
+    }
+    &:hover, &:focus, &:active {
+        color: @color-link-focus;
+    }
+}
+
+p {
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid @color-border;
+}
+
+pre, code {
+    font-size: 90%;
+    font-family: monospace;
+    background-color: @color-bg-tint;
+    border: 1px solid @color-border;
+}
+code {
+    padding: 0 0.25em;
+}
+pre {
+    margin-bottom: 1.4em;
+    padding: 0.5em;
+
+    code {
+        background: none;
+        border: none;
+        font-size: 100%;
+        padding: 0;
+    }
+}
+
+li {
+    line-height: 1.4em;
+}
+dt {
+    font-weight: bold;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    td, th {
+        text-align: left;
+        padding: 0.5em;
+        border-top: 1px solid @color-border;
+        vertical-align: top;
+    }
+}
