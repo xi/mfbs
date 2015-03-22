@@ -10,5 +10,13 @@
     "css",
     "less"
   ],
-  "license": "GPL2+"
+  "license": "GPL2+",
+  "homepage": "https://github.com/xi/mfbs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
