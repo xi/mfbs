@@ -23,14 +23,15 @@ body {
     color: @color-fg;
     font-size: medium;
     font-family: sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 2em auto;
     max-width: 40em;
     padding: 0 0.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
 }
 
 a {
@@ -84,8 +85,13 @@ pre {
     }
 }
 
-li {
-    line-height: 1.4em;
+ol, ul {
+    ol, ul {
+        margin-bottom: 0;
+    }
+    li {
+        line-height: 1.4;
+    }
 }
 dt {
     font-weight: bold;
@@ -107,6 +113,9 @@ table {
     }
 }
 
+textarea {
+    resize: vertical;
+}
 
 @media print {
     html {
