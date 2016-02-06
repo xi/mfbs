@@ -106,3 +106,17 @@ p, address, blockquote, pre, table, dl, ul, ol {
     margin-top: 0;
     margin-bottom: 1em;
 }
+
+@media print {
+    html {
+        background: transparent;
+    }
+
+    body {
+        color: #000;  // Black prints faster:
+    }
+
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
