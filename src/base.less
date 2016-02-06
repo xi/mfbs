@@ -1,12 +1,14 @@
 *,
 *::before,
 *::after {
+    box-sizing: inherit;
     max-width: 100%;
 }
 
 html {
     overflow-y: scroll;
     background-color: @color-bg;
+    box-sizing: border-box;
 }
 body {
     color: @color-fg;
