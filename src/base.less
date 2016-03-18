@@ -21,7 +21,7 @@ html {
 }
 body {
     color: @color-fg;
-    font-size: medium;
+    font-size: 2.5vw;
     font-family: sans-serif;
     line-height: 1.5;
     margin: 2em auto;
@@ -115,6 +115,18 @@ table {
 
 textarea {
     resize: vertical;
+}
+
+@media (min-width: (@font-size-max * 40)) {
+  body {
+    font-size: @font-size-max;
+  }
+}
+
+@media (max-width: (@font-size-min * 40)) {
+  body {
+    font-size: @font-size-min;
+  }
 }
 
 @media print {
