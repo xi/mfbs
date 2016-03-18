@@ -18,12 +18,12 @@ html {
     overflow-y: scroll;
     background-color: @color-bg;
     box-sizing: border-box;
-}
-body {
     color: @color-fg;
     font-size: 2.5vw;
     font-family: sans-serif;
     line-height: 1.5;
+}
+body {
     margin: 2em auto;
     max-width: 41em;
     padding: 0 0.5em;
@@ -118,13 +118,13 @@ textarea {
 }
 
 @media (min-width: (@font-size-max * 40)) {
-  body {
+  html {
     font-size: @font-size-max;
   }
 }
 
 @media (max-width: (@font-size-min * 40)) {
-  body {
+  html {
     font-size: @font-size-min;
   }
 }
