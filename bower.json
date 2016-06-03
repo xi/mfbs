@@ -5,10 +5,10 @@
     "Tobias Bengfort <tobias.bengfort@gmx.net>"
   ],
   "description": "mother fucking bootstrap - a minimal CSS framework",
-  "main": "src/base.less",
+  "main": "src/base.scss",
   "keywords": [
     "css",
-    "less"
+    "sass"
   ],
   "license": "GPL2+",
   "homepage": "https://github.com/xi/mfbs",
