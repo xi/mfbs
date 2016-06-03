@@ -39,9 +39,6 @@ a {
     color: $color-link;
     text-decoration: underline;
 
-    &:visited {
-        color: $color-link;
-    }
     &:hover, &:focus, &:active {
         color: $color-link-focus;
     }
