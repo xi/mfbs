@@ -1,0 +1,56 @@
+label {
+    display: block;
+}
+
+input,
+textarea,
+select {
+    margin: 0 0 1em;
+    border: 1px solid $color-border;
+    border-radius: 0.2em;
+    padding: 0.3em 0.75em;
+    font-family: inherit;
+    font-size: inherit;
+    color: $color-fg;
+    background: $color-bg;
+
+    &:invalid {
+        border-color: $color-invalid;
+        color: $color-invalid;
+    }
+    &:disabled {
+        background: $color-bg-tint !important;
+        color: $color-border !important;
+        border-color: $color-border !important;
+        cursor: not-allowed;
+    }
+}
+
+@mixin button-color($color, $color-contrast, $color-focus) {
+    border-color: $color;
+    color: $color;
+
+    &:hover, &:focus {
+        background: $color;
+        color: $color-contrast;
+    }
+    &:active {
+        border-color: $color-focus;
+        background: $color-focus;
+    }
+}
+
+.button,
+button,
+[type=button],
+[type=submit] {
+    @extend input;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 1.8;
+    background: transparent;
+    text-align: center;
+
+    @include button-color($color-link, $color-bg, $color-link-focus);
+}

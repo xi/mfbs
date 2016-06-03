@@ -120,6 +120,10 @@ textarea {
     resize: vertical;
 }
 
+fieldset {
+    border: 1px solid $color-border;
+}
+
 @media print {
     html {
         background: transparent;
