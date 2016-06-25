@@ -79,7 +79,7 @@ pre {
 ol, ul {
     padding-left: 2rem;
 
-    ol, ul {
+    li > :last-child {
         margin-bottom: 0;
     }
     li {
