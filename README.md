@@ -14,7 +14,8 @@ First, install via bower:
 
 Then, create a master stylesheet like this:
 
-    // First, define your own variables
+    // First, import default variables and adjust with your own
+    @import "bower_components/mfbs/src/variables";
     @import "variables";
 
     // Import basic styling
