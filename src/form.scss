@@ -5,7 +5,7 @@ label {
 input,
 textarea,
 select {
-    margin: 0 0 1em;
+    margin: 0 0 $spacer;
     border: 1px solid $color-border;
     border-radius: 0.2em;
     padding: 0.3em 0.75em;

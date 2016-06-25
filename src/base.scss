@@ -11,7 +11,7 @@
 
 p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: $spacer;
 }
 
 html {
@@ -26,13 +26,13 @@ html {
 body {
     margin: 2em auto;
     max-width: 36em;
-    padding: 0 0.5em;
+    padding: 0 $padding;
 }
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-bottom: 0.8rem;
-    margin-top: 1.5em;
+    margin-top: 1.5 * $spacer;
 }
 
 a {
@@ -52,7 +52,7 @@ a {
 hr {
     border: 0;
     border-bottom: 1px solid $color-border;
-    margin: 1em 0;
+    margin: $spacer 0;
 }
 
 pre, code {
@@ -64,7 +64,7 @@ code {
     padding: 0 0.25em;
 }
 pre {
-    padding: 0.5em;
+    padding: $padding;
     overflow: auto;
     border: 1px solid $color-border;
 
@@ -76,7 +76,7 @@ pre {
 }
 
 ol, ul {
-    padding-left: 2rem;
+    padding-left: $indentation;
 
     li > :last-child {
         margin-bottom: 0;
@@ -89,12 +89,12 @@ dt {
     font-weight: bold;
 }
 dd {
-    margin-left: 2rem;
+    margin-left: $indentation;
 }
 
 blockquote {
     font-style: italic;
-    margin-left: 2rem;
+    margin-left: $indentation;
     margin-right: 0;
 }
 
@@ -104,7 +104,7 @@ table {
 
     td, th {
         text-align: start;
-        padding: 0.5em;
+        padding: $padding;
         border-top: 1px solid $color-border;
         vertical-align: top;
     }
