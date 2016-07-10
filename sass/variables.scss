@@ -1,16 +1,16 @@
 // colors
 
-$color-bg: #fff;
-$color-fg: #333;
-$color-bg-tint: #f3f3f3;
-$color-border: #aaa;
-$color-link: #0275d8;
-$color-link-focus: #014c8c;
-$color-invalid: red;
-$font-size-min: 0.9em;
-$font-size-max: 1.2em;
+$color-bg: #fff !default;
+$color-fg: #333 !default;
+$color-bg-tint: #f3f3f3 !default;
+$color-border: #aaa !default;
+$color-link: #0275d8 !default;
+$color-link-focus: #014c8c !default;
+$color-invalid: red !default;
+$font-size-min: 0.9em !default;
+$font-size-max: 1.2em !default;
 
 // lengths
-$padding: 0.5em;
-$spacer: 1em;
-$indentation: 2rem;
+$padding: 0.5em !default;
+$spacer: 1em !default;
+$indentation: 2rem !default;
