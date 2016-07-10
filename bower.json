@@ -5,7 +5,7 @@
     "Tobias Bengfort <tobias.bengfort@gmx.net>"
   ],
   "description": "mother fucking bootstrap - a minimal CSS framework",
-  "main": "src/base.scss",
+  "main": "sass/base.scss",
   "keywords": [
     "css",
     "sass"
