@@ -1,0 +1,25 @@
+{
+  "name": "mfbs",
+  "version": "1.1.0",
+  "description": "mother fucking bootstrap - a minimal CSS framework",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
+  "eyeglass": {
+    "name": "mfbs",
+    "sassDir": "sass",
+    "exports": false,
+    "needs": "^0.8.0"
+  },
+  "keywords": [
+    "sass",
+    "eyeglass-module"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xi/mfbs.git"
+  },
+  "author": "Tobias Bengfort <tobias.bengfort@posteo.de>",
+  "license": "GPL-2.0+"
+}
