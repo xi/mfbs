@@ -1,3 +1,11 @@
+2.0.0 (2016-07-10)
+------------------
+
+-   eyeglass/npm support
+-   move files to sass folder
+-   use `!default` directive on default variables
+
+
 1.1.0 (2016-06-25)
 ------------------
 
