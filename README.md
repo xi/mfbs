@@ -6,6 +6,10 @@ It is written in [Sass](http://sass-lang.com/) and consists of variable
 definitions (`variables.scss`), some basic styling (`base.scss`) and some
 optional components.
 
+See how it looks
+[here](https://xi.github.io/mfbs/examples/motherfuckingwebsite.html) and
+[here](https://xi.github.io/mfbs/examples/styleguide.html).
+
 # how to use it
 
 First, install via bower or npm (eyeglass):
