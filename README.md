@@ -8,21 +8,22 @@ optional components.
 
 # how to use it
 
-First, install via bower:
+First, install via bower or npm (eyeglass):
 
     bower install xi/mfbs
+    npm install mfbs
 
 Then, create a master stylesheet like this:
 
     // First, import default variables and adjust with your own
-    @import "bower_components/mfbs/src/variables";
+    @import "mfbs/variables";
     @import "variables";
 
     // Import basic styling
-    @import "bower_components/mfbs/src/base";
+    @import "mfbs/base";
 
     // Optionally import some components
-    @import "bower_components/mfbs/src/form";
+    @import "mfbs/form";
 
     // Import your own components
     @import "components/header";
