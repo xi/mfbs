@@ -118,6 +118,11 @@ fieldset {
     border: 1px solid $color-border;
 }
 
+// Prevent sub and sup affecting line-height.
+sub, sup {
+    line-height: 0;
+}
+
 @media print {
     html {
         background: transparent;
