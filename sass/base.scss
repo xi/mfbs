@@ -44,6 +44,15 @@ a {
     }
 }
 
+a:not([href]) {
+    color: inherit;
+    text-decoration: inherit;
+
+    &:hover, &:focus, &:active {
+        color: inherit;
+    }
+}
+
 *::selection {
     background: $color-link;
     color: $color-bg;
