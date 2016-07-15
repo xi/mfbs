@@ -36,6 +36,12 @@ a {
   a:hover, a:focus, a:active {
     color: #014c8c; }
 
+a:not([href]) {
+  color: inherit;
+  text-decoration: inherit; }
+  a:not([href]):hover, a:not([href]):focus, a:not([href]):active {
+    color: inherit; }
+
 *::selection {
   background: #0275d8;
   color: #fff; }
@@ -64,10 +70,6 @@ pre {
 
 ol, ul {
   padding-left: 2rem; }
-  ol li > :last-child, ul li > :last-child {
-    margin-bottom: 0; }
-  ol li, ul li {
-    line-height: 1.4; }
 
 dt {
   font-weight: bold; }
@@ -94,6 +96,9 @@ textarea {
 
 fieldset {
   border: 1px solid #aaa; }
+
+sub, sup {
+  line-height: 0; }
 
 @media print {
   html {

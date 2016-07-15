@@ -1,3 +1,14 @@
+2.1.0 (2016-07-15)
+------------------
+
+-   remove special styling of last child in `li` elements (reverts a change
+    from 1.1.0) as it was very specific and hard to overwrite
+-   do not style `a` elements as links of they do not have a `href` attribute
+    (note that this is done with the `a:not([href])` selector which has a high
+    specificity)
+-   fix line-height with sup/sub
+
+
 2.0.0 (2016-07-10)
 ------------------
 
