@@ -86,13 +86,6 @@ pre {
 
 ol, ul {
     padding-left: $indentation;
-
-    li > :last-child {
-        margin-bottom: 0;
-    }
-    li {
-        line-height: 1.4;
-    }
 }
 dt {
     font-weight: bold;
