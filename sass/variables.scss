@@ -2,10 +2,10 @@
 
 $color-bg: #fff !default;
 $color-fg: #333 !default;
-$color-bg-tint: #f3f3f3 !default;
-$color-border: #aaa !default;
+$color-bg-tint: mix($color-bg, $color-fg, 95%) !default;
+$color-border: mix($color-bg, $color-fg, 60%) !default;
 $color-link: #0275d8 !default;
-$color-link-focus: #014c8c !default;
+$color-link-focus: mix($color-link, $color-fg, 50%) !default;
 $color-invalid: red !default;
 $font-size-min: 0.9em !default;
 $font-size-max: 1.2em !default;
