@@ -7,10 +7,10 @@ $color-border: mix($color-bg, $color-fg, 60%) !default;
 $color-link: #0275d8 !default;
 $color-link-focus: mix($color-link, $color-fg, 50%) !default;
 $color-invalid: red !default;
-$font-size-min: 0.9em !default;
-$font-size-max: 1.2em !default;
 
 // lengths
+$font-size-min: 0.9em !default;
+$font-size-max: 1.2em !default;
 $padding: 0.5em !default;
 $spacer: 1em !default;
 $indentation: 2rem !default;

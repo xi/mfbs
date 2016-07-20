@@ -36,8 +36,8 @@ select {
     color: $color-contrast;
 
     &:hover, &:focus {
-        border-color: mix($color, $color-focus);
-        background: mix($color, $color-focus);
+        border-color: mix($color, $color-focus, 50%);
+        background: mix($color, $color-focus, 50%);
         color: $color-contrast;
     }
     &:active {
