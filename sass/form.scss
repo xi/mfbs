@@ -2,17 +2,21 @@ label {
     display: block;
 }
 
-input,
-textarea,
-select {
+%inputBase {
     margin: 0 0 $spacer;
     border: 1px solid $color-border;
     border-radius: 0.2em;
     padding: 0.3em 0.75em;
     font-family: inherit;
     font-size: inherit;
-    color: $color-fg;
+}
+
+input,
+textarea,
+select {
+    @extend %inputBase;
     background: $color-bg;
+    color: $color-fg;
 
     &:invalid {
         border-color: $color-invalid;
@@ -28,15 +32,24 @@ select {
 
 @mixin button-color($color, $color-contrast, $color-focus) {
     border-color: $color;
-    color: $color;
+    background: $color;
+    color: $color-contrast;
 
     &:hover, &:focus {
-        background: $color;
+        border-color: mix($color, $color-focus);
+        background: mix($color, $color-focus);
         color: $color-contrast;
     }
     &:active {
         border-color: $color-focus;
         background: $color-focus;
+        color: $color-contrast;
+    }
+    &:disabled {
+        border-color: mix($color, $color-contrast, 50%);
+        background: mix($color, $color-contrast, 50%);
+        color: mix($color, $color-contrast, 10%);
+        cursor: not-allowed;
     }
 }
 
@@ -44,12 +57,11 @@ select {
 button,
 [type=button],
 [type=submit] {
-    @extend input;
+    @extend %inputBase;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     line-height: 1.8;
-    background: transparent;
     text-align: center;
 
     @include button-color($color-link, $color-bg, $color-link-focus);
