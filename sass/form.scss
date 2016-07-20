@@ -23,9 +23,9 @@ select {
         color: $color-invalid;
     }
     &:disabled {
-        background: $color-bg-tint !important;
-        color: $color-border !important;
-        border-color: $color-border !important;
+        border-color: $color-border;
+        background: $color-bg-tint;
+        color: $color-border;
         cursor: not-allowed;
     }
 }
