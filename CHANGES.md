@@ -1,3 +1,10 @@
+2.2.0 (2016-09-11)
+------------------
+
+-   use solid button design instead of "ghost"
+-   derive some default colors from others
+
+
 2.1.0 (2016-07-15)
 ------------------
 
