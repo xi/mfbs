@@ -1,3 +1,10 @@
+2.2.1 (2016-11-12)
+------------------
+
+-   refine table styles
+-   reduce default indentation (better for small screens)
+
+
 2.2.0 (2016-09-11)
 ------------------
 

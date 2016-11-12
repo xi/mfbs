@@ -34,7 +34,7 @@ a {
   color: #0275d8;
   text-decoration: underline; }
   a:hover, a:focus, a:active {
-    color: #014c8c; }
+    color: #1b5486; }
 
 a:not([href]) {
   color: inherit;
@@ -48,13 +48,13 @@ a:not([href]) {
 
 hr {
   border: 0;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #adadad;
   margin: 1em 0; }
 
 pre, code {
   font-size: 90%;
   font-family: monospace;
-  background-color: #f3f3f3; }
+  background-color: whitesmoke; }
 
 code {
   padding: 0 0.25em; }
@@ -62,40 +62,45 @@ code {
 pre {
   padding: 0.5em;
   overflow: auto;
-  border: 1px solid #aaa; }
+  border: 1px solid #adadad; }
   pre code {
     background: none;
     font-size: 100%;
     padding: 0; }
 
 ol, ul {
-  padding-left: 2rem; }
+  padding-left: 1.5rem; }
 
 dt {
   font-weight: bold; }
 
 dd {
-  margin-left: 2rem; }
+  margin-left: 1.5rem; }
 
 blockquote {
   font-style: italic;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   margin-right: 0; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-  table td, table th {
-    text-align: start;
-    padding: 0.5em;
-    border-top: 1px solid #aaa;
-    vertical-align: top; }
+
+tr {
+  border-top: 1px solid #adadad; }
+  tr:last-child {
+    border-bottom: 1px solid #adadad; }
+
+td, th {
+  text-align: start;
+  padding: 0.25em;
+  vertical-align: top; }
 
 textarea {
   resize: vertical; }
 
 fieldset {
-  border: 1px solid #aaa; }
+  border: 1px solid #adadad; }
 
 sub, sup {
   line-height: 0; }
@@ -119,37 +124,35 @@ html {
 label {
   display: block; }
 
-input, .button,
+input,
+textarea,
+select, .button,
 button,
 [type=button],
-[type=submit],
-textarea,
-select {
+[type=submit] {
   margin: 0 0 1em;
-  border: 1px solid #aaa;
+  border: 1px solid #adadad;
   border-radius: 0.2em;
   padding: 0.3em 0.75em;
   font-family: inherit;
-  font-size: inherit;
-  color: #333;
-  background: #fff; }
-  input:invalid, .button:invalid,
-  button:invalid,
-  [type=button]:invalid,
-  [type=submit]:invalid,
+  font-size: inherit; }
+
+input,
+textarea,
+select {
+  background: #fff;
+  color: #333; }
+  input:invalid,
   textarea:invalid,
   select:invalid {
     border-color: red;
     color: red; }
-  input:disabled, .button:disabled,
-  button:disabled,
-  [type=button]:disabled,
-  [type=submit]:disabled,
+  input:disabled,
   textarea:disabled,
   select:disabled {
-    background: #f3f3f3 !important;
-    color: #aaa !important;
-    border-color: #aaa !important;
+    border-color: #adadad;
+    background: whitesmoke;
+    color: #adadad;
     cursor: not-allowed; }
 
 .button,
@@ -160,10 +163,10 @@ button,
   display: inline-block;
   cursor: pointer;
   line-height: 1.8;
-  background: transparent;
   text-align: center;
   border-color: #0275d8;
-  color: #0275d8; }
+  background: #0275d8;
+  color: #fff; }
   .button:hover, .button:focus,
   button:hover,
   button:focus,
@@ -171,14 +174,24 @@ button,
   [type=button]:focus,
   [type=submit]:hover,
   [type=submit]:focus {
-    background: #0275d8;
+    border-color: #0f65af;
+    background: #0f65af;
     color: #fff; }
   .button:active,
   button:active,
   [type=button]:active,
   [type=submit]:active {
-    border-color: #014c8c;
-    background: #014c8c; }
+    border-color: #1b5486;
+    background: #1b5486;
+    color: #fff; }
+  .button:disabled,
+  button:disabled,
+  [type=button]:disabled,
+  [type=submit]:disabled {
+    border-color: #81baec;
+    background: #81baec;
+    color: #e6f1fb;
+    cursor: not-allowed; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
