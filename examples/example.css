@@ -20,21 +20,16 @@ html {
   font-family: sans-serif;
   line-height: 1.4; }
 
-body {
-  margin: 2em auto;
-  max-width: 36em;
-  padding: 0 0.5em; }
-
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-bottom: 0.8rem;
   margin-top: 1.5em; }
 
 a {
-  color: #0275d8;
+  color: #06f;
   text-decoration: underline; }
   a:hover, a:focus, a:active {
-    color: #1b5486; }
+    color: #1a4d99; }
 
 a:not([href]) {
   color: inherit;
@@ -43,7 +38,7 @@ a:not([href]) {
     color: inherit; }
 
 *::selection {
-  background: #0275d8;
+  background: #06f;
   color: #fff; }
 
 hr {
@@ -112,6 +107,11 @@ sub, sup {
   h2, h3 {
     page-break-after: avoid; } }
 
+body {
+  margin: 2em auto;
+  max-width: 36em;
+  padding: 0 0.5em; }
+
 html {
   font-size: 2.5vw; }
   @media (min-width: 48em) {
@@ -164,8 +164,8 @@ button,
   cursor: pointer;
   line-height: 1.8;
   text-align: center;
-  border-color: #0275d8;
-  background: #0275d8;
+  border-color: #06f;
+  background: #06f;
   color: #fff; }
   .button:hover, .button:focus,
   button:hover,
@@ -174,26 +174,28 @@ button,
   [type=button]:focus,
   [type=submit]:hover,
   [type=submit]:focus {
-    border-color: #0f65af;
-    background: #0f65af;
+    border-color: #0d5acc;
+    background: #0d5acc;
     color: #fff; }
   .button:active,
   button:active,
   [type=button]:active,
   [type=submit]:active {
-    border-color: #1b5486;
-    background: #1b5486;
+    border-color: #1a4d99;
+    background: #1a4d99;
     color: #fff; }
   .button:disabled,
   button:disabled,
   [type=button]:disabled,
   [type=submit]:disabled {
-    border-color: #81baec;
-    background: #81baec;
-    color: #e6f1fb;
+    border-color: #80b3ff;
+    background: #80b3ff;
+    color: #e6f0ff;
     cursor: not-allowed; }
+
+html {
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: serif; }
-

@@ -1,3 +1,10 @@
+3.0.0 (2016-12-30)
+------------------
+
+-   move layout styles to separate module
+-   change default link color
+
+
 2.2.1 (2016-11-12)
 ------------------
 
