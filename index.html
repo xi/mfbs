@@ -10,82 +10,38 @@
 </head>
 <body>
 <p>mfbs (motherfuckingbootstap) is a CSS microframework inspired by <a href="https://getbootstrap.com/">twitter bootstrap</a> and <a href="http://bettermotherfuckingwebsite.com/">http://bettermotherfuckingwebsite.com/</a>.</p>
+<p>I found that started every new project with mostly the same CSS code. So instead of duplicating that code again and again, I distilled the base styles from several projects into this little library.</p>
 <p>It is written in <a href="http://sass-lang.com/">Sass</a> and consists of variable definitions (<code>variables.scss</code>), some basic styling (<code>base.scss</code>) and some optional components.</p>
-<p>See how it looks <a href="https://xi.github.io/mfbs/examples/motherfuckingwebsite.html">here</a> and <a href="https://xi.github.io/mfbs/examples/styleguide.html">here</a>.</p>
+<p>See how it looks <a href="https://xi.github.io/mfbs/examples/motherfuckingwebsite.html">here</a> and <a href="https://xi.github.io/mfbs/examples/styleguide.html">here</a>. You can also use this <a href="javascript:(function() {var $ = function(selector) {var elements = document.querySelectorAll(selector);return {append: function(e) {elements[0].appendChild(e);},forEach: function(fn) {Array.prototype.forEach.call(elements, fn);}};};$(&#x27;[style]&#x27;).forEach(function(e) {e.removeAttribute(&#x27;style&#x27;);});$(&#x27;style&#x27;).forEach(function(e) {e.remove();});$(&#x27;link[rel=&quot;stylesheet&quot;]&#x27;).forEach(function(e) {e.remove();});[&#x27;bgcolor&#x27;, &#x27;color&#x27;, &#x27;width&#x27;, &#x27;height&#x27;, &#x27;face&#x27;, &#x27;size&#x27;].forEach(function(attr) {$(&#x27;[&#x27; + attr + &#x27;]&#x27;).forEach(function(e) {e.removeAttribute(attr);});});var style = document.createElement(&#x27;style&#x27;);style.innerHTML = &#x27;@viewport { width: device-width; }*,*::before,*::after { box-sizing: inherit; }img { max-width: 100%; }p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset { margin-top: 0; margin-bottom: 1em; }html { overflow-y: scroll; background-color: #fff; box-sizing: border-box; color: #333; font-size: 1.2em; font-family: sans-serif; line-height: 1.5; }h1, h2, h3, h4, h5, h6 { line-height: 1.2; margin-bottom: 0.8rem; margin-top: 1.5em; }a { color: #26c; text-decoration: underline; } a:hover, a:focus, a:active { color: #2b4d80; }a:not([href]) { color: inherit; text-decoration: inherit; } a:not([href]):hover, a:not([href]):focus, a:not([href]):active { color: inherit; }*::selection { background: #26c; color: #fff; }hr { border: 0; border-bottom: 1px solid #adadad; margin: 1em 0; }pre, code { font-size: 90%; font-family: monospace; background-color: whitesmoke; }code { padding: 0 0.25em; }pre { padding: 0.5em; overflow: auto; border: 1px solid #adadad; } pre code { background: none; font-size: 100%; padding: 0; }ol, ul { padding-left: 1.5rem; }dt { font-weight: bold; }dd { margin-left: 1.5rem; }blockquote { font-style: italic; margin-left: 1.5rem; margin-right: 0; }table { border-collapse: collapse; border-spacing: 0; }tr { border-bottom: 1px solid #adadad; }td, th { text-align: start; padding: 0.25em; vertical-align: top; }textarea { resize: vertical; }fieldset { border: 1px solid #adadad; }sub, sup { line-height: 0; }@media print { html { background: transparent; color: #000; } h2, h3 { page-break-after: avoid; } }body { margin: 2em auto; max-width: 38em; padding: 0 0.5em; }html { font-size: 2.5vw; } @media (min-width: 48em) { html { font-size: 1.2em; } } @media (max-width: 36em) { html { font-size: 0.9em; } }label { display: block; }input,textarea,select, .button,button,[type=button],[type=submit] { margin: 0 0 1em; border: 1px solid #adadad; border-radius: 0.2em; padding: 0.3em 0.75em; font-family: inherit; font-size: inherit; }input,textarea,select { background: #fff; color: #333; } input:invalid, textarea:invalid, select:invalid { border-color: red; color: red; } input:disabled, textarea:disabled, select:disabled { border-color: #adadad; background: whitesmoke; color: #adadad; cursor: not-allowed; }.button,button,[type=button],[type=submit] { text-decoration: none; display: inline-block; cursor: pointer; line-height: 1.8; text-align: center; border-color: #26c; background: #26c; color: #fff; } .button:hover, .button:focus, button:hover, button:focus, [type=button]:hover, [type=button]:focus, [type=submit]:hover, [type=submit]:focus { border-color: #275aa6; background: #275aa6; color: #fff; } .button:active, button:active, [type=button]:active, [type=submit]:active { border-color: #2b4d80; background: #2b4d80; color: #fff; } .button:disabled, button:disabled, [type=button]:disabled, [type=submit]:disabled { border-color: #91b3e6; background: #91b3e6; color: #e9f0fa; cursor: not-allowed; }html { font-weight: 300; }h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: serif; }&#x27;;$(&#x27;head&#x27;).append(style);})();">bookmarklet</a>.</p>
 <h1 id="how-to-use-it">how to use it</h1>
-<p>First, install via bower or npm (eyeglass):</p>
-<pre><code>bower install xi/mfbs
-npm install mfbs</code></pre>
-<p>Then, create a master stylesheet like this:</p>
-<pre><code>// First, import default variables and adjust with your own
-@import &quot;mfbs/variables&quot;;
+<pre><code>// First, define your own variables
 @import &quot;variables&quot;;
 
-// Import basic styling
+// Import basic styling and default variables
+@import &quot;mfbs/variables&quot;;
 @import &quot;mfbs/base&quot;;
 
-// Optionally import some components
+// Optionally import some opinionated styling
 @import &quot;mfbs/form&quot;;
 
 // Import your own components
 @import &quot;components/header&quot;;
 @import &quot;components/navigation&quot;;
 @import &quot;components/article&quot;;</code></pre>
-<h1 id="the-fuck">the fuck?</h1>
-<p>I tend to duplicate a lot of basic styling between projects. So naturally I was looking for ways to reduce that duplication. Twitter bootstrap is nice, but it does so much more than what I needed. So instead I rolled my own.</p>
-<p>Here's the philosophy:</p>
+<h1 id="features">features</h1>
 <ul>
-<li>A site using no styling except for mfbs should have decent usability.</li>
-<li>mfbs should be as minimal as possible
-<ul>
-<li>no workarounds for browser bugs</li>
-<li>opinionated styling should go into optional components</li>
-<li>leverage default styles</li>
-</ul></li>
-<li>apart from providing basic styling, mfbs should define and promote a workflow for writing CSS
-<ul>
-<li>based on <a href="http://oocss.org/">OOCSS</a> and <a href="http://sass-lang.com/">Sass</a></li>
-<li>naming conventions</li>
-<li>use variables for all colors</li>
-<li>prefer relative units</li>
-<li>accessibility</li>
-</ul></li>
+<li>mfbs on its own is completely sufficient for simple text-only websites.</li>
+<li>It can easily be customized with variables.</li>
+<li>The default colors were carefully picked to look nice and satisfy minimum contrast requirements.</li>
+<li>Opinionated styling for buttons, layout, and some more things is available in optional modules.</li>
+<li>Base styles have low specificity, so they can easily be extended with custom components.</li>
+<li>The small set of variables is very focused and scales well for projects of any size.</li>
 </ul>
-<h1 id="a-brief-introduction-to-web-design-slightly-opinionated">A brief introduction to web design (slightly opinionated)</h1>
-<h2 id="wysiwym-what-you-see-is-what-you-mean">WYSIWYM (What you see is what you mean)</h2>
-<p>Web design is fundamentally different from many other forms of design, especially print, because you can not see the final product. Of course, you can look at a webpage in your browser, but you will never be able to see or even imagine that page on all possible devices, with all possible browsers and browser extensions, let alone user generated content. That is why instead of coding what you want to see, you should write what you mean.</p>
-<p>Example: You want to center some text on the screen, so increase the <code>margin-left</code> to something like 1100px and it looks fine, right? Maybe on your screen, but definitely not on a mobile device. Instead, you should use <code>text-align: center</code>. With this information, the browsers can understand what you want and do their best to produce a usable result.</p>
-<h2 id="maintenance">Maintenance</h2>
-<p>A website is typically never finished. Make sure that you will still be able to understand your code one year from now!</p>
-<p>Example: Styling elements based on context (using descendant selectors) may seem like a good idea, but it soon gets extremely complicated to understand which rules apply to which element with which priority.</p>
-<h2 id="progressive-enhancement">Progressive enhancement</h2>
-<p>Not all clients provide the same features. Think about small screens, outdated browsers, blocked JavaScript, or assistive technology. You should never rely on these advanced features. Instead, use them to optionally enhance user experience if additional features are available.</p>
-<p>Example: Build your website for small screens by default. If more screenspace is available (check via <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>) you can switch to an optimized layout (this approach is called &quot;mobile first&quot;).</p>
-<h2 id="separate-style-functionality-and-content">Separate style, functionality, and content</h2>
-<p>The web is build with three distinct languages: HTML for content, JavaScript for functionality and CSS for styling. Make sure that you have a clear separation between these areas!</p>
-<p>Example: Do not use element selectors in CSS. They break easily when you change your HTML. Instead, use semantic class names.</p>
-<h2 id="conventions">Conventions</h2>
-<p>People spend much more time on other peoples websites, so do not try to get fancy. Just do what everyone is doing, that's just fine.</p>
-<p>Example: Links are much more likely to be fund if they are blue and underlined.</p>
-<h2 id="use-appropriate-units">Use appropriate units</h2>
-<p>For some reason, people seem to be afraid of using different units in their stylesheets. There seems to be a <code>px</code> camp, a <code>em</code> camp and since recently also a <code>rem</code> camp. But the truth is: Each of these units is different and has their specific use. Learn the meaning of each of them and when to use it!</p>
-<h2 id="objects-states-and-modifiers">Objects, states, and modifiers</h2>
-<p>You can not possibly think about the complete interface at once. Instead, divide it into meaningful parts. Here is how I do it:</p>
-<dl>
-<dt>Object</dt>
-<dd><p>An object is a part of the UI that could stand on its own or be repeated in different places. It can be anything from a link to a login form or a layout structure. Objects are references by their classname, which should be dashed-lowercase (e.g. <code>.login-form</code>).</p>
-<p>Note: Splitting your UI into objects is not as easy as you might think. Take special care to get this right! For example, you might want to split layout and styling into separate objects.</p>
-</dd>
-<dt>Modifier</dt>
-<dd><p>Sometimes you might want to have a slightly modified variant of an existing object. In that case, create a modifier class that is prefixed with <code>m-</code> (e.g. <code>.button.m-call-to-action</code>).</p>
-</dd>
-<dt>State</dt>
-<dd><p>If the state of an object can be changed on runtime, use a state class that is prefixed <code>is-</code> or <code>has-</code>. Alternatively, utilize the existing pseudo classes (e.g. <code>a.is-active</code>, <code>a:disabled</code>).</p>
-</dd>
-</dl>
-<h2 id="use-variables">Use variables</h2>
-<p>If you use the same values in several places, make that explicit by defining it as a variable with a semantic name. Colors are an obvious example, but this also makes sense for some length values.</p>
-<h2 id="living-styleguide">Living styleguide</h2>
-<p>To keep an overview of everything you have done, you should create a page with examples and descriptions for all your objects, modifiers, states and variables.</p>
+<h1 id="when-to-use">when to use</h1>
+<ul>
+<li>Use the default for simple general-purpose styling</li>
+<li>For small projects, overwrite some variables and define some custom components (e.g. header)</li>
+<li>For large projects, you probably do not want to include the optional, opinionated modules. But the base styles and variables are still a solid base to build on.</li>
+</ul>
 </body>
 </html>
