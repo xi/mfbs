@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="examples/example.css" type="text/css" />
+</head>
+<body>
+<p>mfbs (motherfuckingbootstap) is a CSS microframework inspired by <a href="https://getbootstrap.com/">twitter bootstrap</a> and <a href="http://bettermotherfuckingwebsite.com/">http://bettermotherfuckingwebsite.com/</a>.</p>
+<p>It is written in <a href="http://sass-lang.com/">Sass</a> and consists of variable definitions (<code>variables.scss</code>), some basic styling (<code>base.scss</code>) and some optional components.</p>
+<p>See how it looks <a href="https://xi.github.io/mfbs/examples/motherfuckingwebsite.html">here</a> and <a href="https://xi.github.io/mfbs/examples/styleguide.html">here</a>.</p>
+<h1 id="how-to-use-it">how to use it</h1>
+<p>First, install via bower or npm (eyeglass):</p>
+<pre><code>bower install xi/mfbs
+npm install mfbs</code></pre>
+<p>Then, create a master stylesheet like this:</p>
+<pre><code>// First, import default variables and adjust with your own
+@import &quot;mfbs/variables&quot;;
+@import &quot;variables&quot;;
+
+// Import basic styling
+@import &quot;mfbs/base&quot;;
+
+// Optionally import some components
+@import &quot;mfbs/form&quot;;
+
+// Import your own components
+@import &quot;components/header&quot;;
+@import &quot;components/navigation&quot;;
+@import &quot;components/article&quot;;</code></pre>
+<h1 id="the-fuck">the fuck?</h1>
+<p>I tend to duplicate a lot of basic styling between projects. So naturally I was looking for ways to reduce that duplication. Twitter bootstrap is nice, but it does so much more than what I needed. So instead I rolled my own.</p>
+<p>Here's the philosophy:</p>
+<ul>
+<li>A site using no styling except for mfbs should have decent usability.</li>
+<li>mfbs should be as minimal as possible
+<ul>
+<li>no workarounds for browser bugs</li>
+<li>opinionated styling should go into optional components</li>
+<li>leverage default styles</li>
+</ul></li>
+<li>apart from providing basic styling, mfbs should define and promote a workflow for writing CSS
+<ul>
+<li>based on <a href="http://oocss.org/">OOCSS</a> and <a href="http://sass-lang.com/">Sass</a></li>
+<li>naming conventions</li>
+<li>use variables for all colors</li>
+<li>prefer relative units</li>
+<li>accessibility</li>
+</ul></li>
+</ul>
+<h1 id="a-brief-introduction-to-web-design-slightly-opinionated">A brief introduction to web design (slightly opinionated)</h1>
+<h2 id="wysiwym-what-you-see-is-what-you-mean">WYSIWYM (What you see is what you mean)</h2>
+<p>Web design is fundamentally different from many other forms of design, especially print, because you can not see the final product. Of course, you can look at a webpage in your browser, but you will never be able to see or even imagine that page on all possible devices, with all possible browsers and browser extensions, let alone user generated content. That is why instead of coding what you want to see, you should write what you mean.</p>
+<p>Example: You want to center some text on the screen, so increase the <code>margin-left</code> to something like 1100px and it looks fine, right? Maybe on your screen, but definitely not on a mobile device. Instead, you should use <code>text-align: center</code>. With this information, the browsers can understand what you want and do their best to produce a usable result.</p>
+<h2 id="maintenance">Maintenance</h2>
+<p>A website is typically never finished. Make sure that you will still be able to understand your code one year from now!</p>
+<p>Example: Styling elements based on context (using descendant selectors) may seem like a good idea, but it soon gets extremely complicated to understand which rules apply to which element with which priority.</p>
+<h2 id="progressive-enhancement">Progressive enhancement</h2>
+<p>Not all clients provide the same features. Think about small screens, outdated browsers, blocked JavaScript, or assistive technology. You should never rely on these advanced features. Instead, use them to optionally enhance user experience if additional features are available.</p>
+<p>Example: Build your website for small screens by default. If more screenspace is available (check via <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>) you can switch to an optimized layout (this approach is called &quot;mobile first&quot;).</p>
+<h2 id="separate-style-functionality-and-content">Separate style, functionality, and content</h2>
+<p>The web is build with three distinct languages: HTML for content, JavaScript for functionality and CSS for styling. Make sure that you have a clear separation between these areas!</p>
+<p>Example: Do not use element selectors in CSS. They break easily when you change your HTML. Instead, use semantic class names.</p>
+<h2 id="conventions">Conventions</h2>
+<p>People spend much more time on other peoples websites, so do not try to get fancy. Just do what everyone is doing, that's just fine.</p>
+<p>Example: Links are much more likely to be fund if they are blue and underlined.</p>
+<h2 id="use-appropriate-units">Use appropriate units</h2>
+<p>For some reason, people seem to be afraid of using different units in their stylesheets. There seems to be a <code>px</code> camp, a <code>em</code> camp and since recently also a <code>rem</code> camp. But the truth is: Each of these units is different and has their specific use. Learn the meaning of each of them and when to use it!</p>
+<h2 id="objects-states-and-modifiers">Objects, states, and modifiers</h2>
+<p>You can not possibly think about the complete interface at once. Instead, divide it into meaningful parts. Here is how I do it:</p>
+<dl>
+<dt>Object</dt>
+<dd><p>An object is a part of the UI that could stand on its own or be repeated in different places. It can be anything from a link to a login form or a layout structure. Objects are references by their classname, which should be dashed-lowercase (e.g. <code>.login-form</code>).</p>
+<p>Note: Splitting your UI into objects is not as easy as you might think. Take special care to get this right! For example, you might want to split layout and styling into separate objects.</p>
+</dd>
+<dt>Modifier</dt>
+<dd><p>Sometimes you might want to have a slightly modified variant of an existing object. In that case, create a modifier class that is prefixed with <code>m-</code> (e.g. <code>.button.m-call-to-action</code>).</p>
+</dd>
+<dt>State</dt>
+<dd><p>If the state of an object can be changed on runtime, use a state class that is prefixed <code>is-</code> or <code>has-</code>. Alternatively, utilize the existing pseudo classes (e.g. <code>a.is-active</code>, <code>a:disabled</code>).</p>
+</dd>
+</dl>
+<h2 id="use-variables">Use variables</h2>
+<p>If you use the same values in several places, make that explicit by defining it as a variable with a semantic name. Colors are an obvious example, but this also makes sense for some length values.</p>
+<h2 id="living-styleguide">Living styleguide</h2>
+<p>To keep an overview of everything you have done, you should create a page with examples and descriptions for all your objects, modifiers, states and variables.</p>
+</body>
+</html>

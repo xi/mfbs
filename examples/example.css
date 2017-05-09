@@ -4,7 +4,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: inherit; }
+
+img {
   max-width: 100%; }
 
 p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
@@ -18,7 +20,7 @@ html {
   color: #333;
   font-size: 1.2em;
   font-family: sans-serif;
-  line-height: 1.4; }
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
@@ -26,10 +28,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1.5em; }
 
 a {
-  color: #06f;
+  color: #26c;
   text-decoration: underline; }
   a:hover, a:focus, a:active {
-    color: #1a4d99; }
+    color: #2b4d80; }
 
 a:not([href]) {
   color: inherit;
@@ -38,7 +40,7 @@ a:not([href]) {
     color: inherit; }
 
 *::selection {
-  background: #06f;
+  background: #26c;
   color: #fff; }
 
 hr {
@@ -82,9 +84,7 @@ table {
   border-spacing: 0; }
 
 tr {
-  border-top: 1px solid #adadad; }
-  tr:last-child {
-    border-bottom: 1px solid #adadad; }
+  border-bottom: 1px solid #adadad; }
 
 td, th {
   text-align: start;
@@ -109,7 +109,7 @@ sub, sup {
 
 body {
   margin: 2em auto;
-  max-width: 36em;
+  max-width: 38em;
   padding: 0 0.5em; }
 
 html {
@@ -164,8 +164,8 @@ button,
   cursor: pointer;
   line-height: 1.8;
   text-align: center;
-  border-color: #06f;
-  background: #06f;
+  border-color: #26c;
+  background: #26c;
   color: #fff; }
   .button:hover, .button:focus,
   button:hover,
@@ -174,23 +174,23 @@ button,
   [type=button]:focus,
   [type=submit]:hover,
   [type=submit]:focus {
-    border-color: #0d5acc;
-    background: #0d5acc;
+    border-color: #275aa6;
+    background: #275aa6;
     color: #fff; }
   .button:active,
   button:active,
   [type=button]:active,
   [type=submit]:active {
-    border-color: #1a4d99;
-    background: #1a4d99;
+    border-color: #2b4d80;
+    background: #2b4d80;
     color: #fff; }
   .button:disabled,
   button:disabled,
   [type=button]:disabled,
   [type=submit]:disabled {
-    border-color: #80b3ff;
-    background: #80b3ff;
-    color: #e6f0ff;
+    border-color: #91b3e6;
+    background: #91b3e6;
+    color: #e9f0fa;
     cursor: not-allowed; }
 
 html {
@@ -199,3 +199,4 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-family: serif; }
+
