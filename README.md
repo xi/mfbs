@@ -19,11 +19,11 @@ First, install via bower or npm (eyeglass):
 
 Then, create a master stylesheet like this:
 
-    // First, import default variables and adjust with your own
-    @import "mfbs/variables";
+    // First, define your own variables
     @import "variables";
 
-    // Import basic styling
+    // Import basic styling and default variables
+    @import "mfbs/variables";
     @import "mfbs/base";
 
     // Optionally import some components
