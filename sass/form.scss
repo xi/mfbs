@@ -18,10 +18,6 @@ select {
     background: $color-bg;
     color: $color-fg;
 
-    &:invalid {
-        border-color: $color-invalid;
-        color: $color-invalid;
-    }
     &:disabled {
         border-color: $color-border;
         background: $color-bg-tint;
