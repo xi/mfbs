@@ -20,6 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/xi/mfbs.git"
   },
+  "files": ["sass"],
   "author": "Tobias Bengfort <tobias.bengfort@posteo.de>",
   "license": "GPL-2.0+"
 }
