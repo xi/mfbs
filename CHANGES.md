@@ -1,3 +1,14 @@
+3.1.0 (2017-07-12)
+------------------
+
+-   change default link color (to unify across projects)
+-   only limit max-width on img
+-   remove top border from tables (reduces specificity)
+-   tweak line width and leading (inspired by sakura)
+-   add width variable
+-   rm `:invalid` styling (maybe use `:user-error` instead in the future)
+
+
 3.0.0 (2016-12-30)
 ------------------
 
