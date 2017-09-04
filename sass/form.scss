@@ -18,6 +18,9 @@ select {
     background: $color-bg;
     color: $color-fg;
 
+    &:focus {
+        border-color: $color-link-focus;
+    }
     // FIXME: replace by :user-invalid once available
     &:-moz-ui-invalid {
         border-color: $color-invalid;
