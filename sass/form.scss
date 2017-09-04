@@ -18,6 +18,11 @@ select {
     background: $color-bg;
     color: $color-fg;
 
+    // FIXME: replace by :user-invalid once available
+    &:-moz-ui-invalid {
+        border-color: $color-invalid;
+        color: $color-invalid;
+    }
     &:disabled {
         border-color: $color-border;
         background: $color-bg-tint;
