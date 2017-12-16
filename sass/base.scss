@@ -115,7 +115,8 @@ td, th {
     vertical-align: top;
 }
 
-textarea {
+textarea,
+select[multiple] {
     resize: vertical;
 }
 
