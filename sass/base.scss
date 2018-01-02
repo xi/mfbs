@@ -5,7 +5,7 @@
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 img {
@@ -20,7 +20,6 @@ p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
 html {
     overflow-y: scroll;
     background-color: $color-bg;
-    box-sizing: border-box;
     color: $color-fg;
     font-size: $font-size-max;
     font-family: sans-serif;
