@@ -1,3 +1,16 @@
+4.0.0 (2018-01-11)
+------------------
+
+-   do not inherit box-sizing
+-   Allow vertical resizing on multi-selects
+-   form: rm border radius
+-   form: rm margin from inputs
+-   reduce line width
+-   do not add margin above first heading
+-   Highlight focused inputs in firefox
+-   Re-introduce invalid styling for firefox
+
+
 3.1.1 (2017-07-12)
 ------------------
 

@@ -4,7 +4,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box; }
+
+img {
   max-width: 100%; }
 
 p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
@@ -14,22 +16,23 @@ p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
 html {
   overflow-y: scroll;
   background-color: #fff;
-  box-sizing: border-box;
   color: #333;
   font-size: 1.2em;
   font-family: sans-serif;
-  line-height: 1.4; }
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-bottom: 0.8rem;
-  margin-top: 1.5em; }
+  margin-top: 0; }
+  * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+    margin-top: 1.5em; }
 
 a {
-  color: #06f;
+  color: #26c;
   text-decoration: underline; }
   a:hover, a:focus, a:active {
-    color: #1a4d99; }
+    color: #2b4d80; }
 
 a:not([href]) {
   color: inherit;
@@ -38,7 +41,7 @@ a:not([href]) {
     color: inherit; }
 
 *::selection {
-  background: #06f;
+  background: #26c;
   color: #fff; }
 
 hr {
@@ -82,16 +85,15 @@ table {
   border-spacing: 0; }
 
 tr {
-  border-top: 1px solid #adadad; }
-  tr:last-child {
-    border-bottom: 1px solid #adadad; }
+  border-bottom: 1px solid #adadad; }
 
 td, th {
   text-align: start;
   padding: 0.25em;
   vertical-align: top; }
 
-textarea {
+textarea,
+select[multiple] {
   resize: vertical; }
 
 fieldset {
@@ -109,7 +111,7 @@ sub, sup {
 
 body {
   margin: 2em auto;
-  max-width: 36em;
+  max-width: 37em;
   padding: 0 0.5em; }
 
 html {
@@ -130,9 +132,7 @@ select, .button,
 button,
 [type=button],
 [type=submit] {
-  margin: 0 0 1em;
   border: 1px solid #adadad;
-  border-radius: 0.2em;
   padding: 0.3em 0.75em;
   font-family: inherit;
   font-size: inherit; }
@@ -142,9 +142,13 @@ textarea,
 select {
   background: #fff;
   color: #333; }
-  input:invalid,
-  textarea:invalid,
-  select:invalid {
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #2b4d80; }
+  input:-moz-ui-invalid,
+  textarea:-moz-ui-invalid,
+  select:-moz-ui-invalid {
     border-color: red;
     color: red; }
   input:disabled,
@@ -164,8 +168,9 @@ button,
   cursor: pointer;
   line-height: 1.8;
   text-align: center;
-  border-color: #06f;
-  background: #06f;
+  border-radius: 0.3em;
+  border-color: #26c;
+  background: #26c;
   color: #fff; }
   .button:hover, .button:focus,
   button:hover,
@@ -174,28 +179,27 @@ button,
   [type=button]:focus,
   [type=submit]:hover,
   [type=submit]:focus {
-    border-color: #0d5acc;
-    background: #0d5acc;
+    border-color: #275aa6;
+    background: #275aa6;
     color: #fff; }
   .button:active,
   button:active,
   [type=button]:active,
   [type=submit]:active {
-    border-color: #1a4d99;
-    background: #1a4d99;
+    border-color: #2b4d80;
+    background: #2b4d80;
     color: #fff; }
   .button:disabled,
   button:disabled,
   [type=button]:disabled,
   [type=submit]:disabled {
-    border-color: #80b3ff;
-    background: #80b3ff;
-    color: #e6f0ff;
+    border-color: #91b3e6;
+    background: #91b3e6;
+    color: #e9f0fa;
     cursor: not-allowed; }
 
 html {
-  font-weight: 300; }
+  font-family: serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-family: serif; }
+  font-family: sans-serif; }
