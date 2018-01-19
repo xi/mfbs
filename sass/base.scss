@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-a {
+:link {
     color: $color-link;
     text-decoration: underline;
 
@@ -41,12 +41,12 @@ a {
     }
 }
 
-a:not([href]) {
-    color: inherit;
-    text-decoration: inherit;
+:visited {
+    color: $color-link-visited;
+    text-decoration: underline;
 
     &:hover, &:focus, &:active {
-        color: inherit;
+        color: $color-link-visited-focus;
     }
 }
 

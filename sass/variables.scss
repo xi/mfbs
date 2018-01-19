@@ -5,7 +5,9 @@ $color-fg: #333 !default;
 $color-bg-tint: mix($color-bg, $color-fg, 95%) !default;
 $color-border: mix($color-bg, $color-fg, 60%) !default;
 $color-link: #26c !default;
+$color-link-visited: mix($color-link, purple, 40%) !default;
 $color-link-focus: mix($color-link, $color-fg, 50%) !default;
+$color-link-visited-focus: mix($color-link-visited, $color-fg, 50%) !default;
 $color-invalid: red !default;
 
 // lengths
