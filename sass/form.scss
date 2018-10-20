@@ -7,6 +7,7 @@ label {
     padding: 0.3em 0.75em;
     font-family: inherit;
     font-size: inherit;
+    line-height: 1.8;
 }
 
 input,
@@ -30,6 +31,10 @@ select {
         color: $color-border;
         cursor: not-allowed;
     }
+}
+
+textarea {
+    line-height: inherit;
 }
 
 @mixin button-color($color, $color-contrast, $color-focus) {
@@ -63,7 +68,6 @@ button,
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    line-height: 1.8;
     text-align: center;
     border-radius: 0.3em;
 
