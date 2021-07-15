@@ -1,4 +1,4 @@
-5.0.0 (unreleased)
+5.0.0 (2021-07-15)
 ------------------
 
 -   link styling now uses `:link` instead of `a` (higher specificity!)
