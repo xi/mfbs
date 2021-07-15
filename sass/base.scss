@@ -111,10 +111,6 @@ select[multiple] {
     resize: vertical;
 }
 
-fieldset {
-    border: 1px solid $color-border;
-}
-
 // Prevent sub and sup affecting line-height.
 sub, sup {
     line-height: 0;
