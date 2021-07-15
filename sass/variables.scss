@@ -8,7 +8,6 @@ $color-link: #26c !default;
 $color-link-visited: mix($color-link, purple, 40%) !default;
 $color-link-focus: mix($color-link, $color-fg, 50%) !default;
 $color-link-visited-focus: mix($color-link-visited, $color-fg, 50%) !default;
-$color-invalid: red !default;
 
 // lengths
 $font-size-min: 0.9em !default;
