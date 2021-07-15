@@ -2,20 +2,7 @@
   "name": "mfbs",
   "version": "4.0.0",
   "description": "mother fucking bootstrap - a minimal CSS framework",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
-  "scripts": {},
-  "eyeglass": {
-    "name": "mfbs",
-    "sassDir": "sass",
-    "exports": false,
-    "needs": "^0.8.0"
-  },
-  "keywords": [
-    "sass",
-    "eyeglass-module"
-  ],
+  "keywords": ["sass"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xi/mfbs.git"
