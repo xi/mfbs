@@ -1,3 +1,22 @@
+5.0.0 (unreleased)
+------------------
+
+-   link styling now uses `:link` instead of `a` (higher specificity!)
+-   rm support for bower
+-   rm support for eyeglass
+-   rm styling for selection
+-   rm styling for fieldset
+-   rm styling for invalid form field (again)
+-   rm viewport at-rule
+-   add `visited` styling and `$color-link-visited`
+-   use `:focus-visible` instead of `:focus` (with compatbility for legacy
+    browsers)
+-   add hidden styling
+-   restrict max-width for video
+-   darker default `$border-color`
+-   avoid page break in print after any heading, not just `h2` and `h3`
+
+
 4.0.0 (2018-01-11)
 ------------------
 
