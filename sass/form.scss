@@ -20,6 +20,9 @@ select {
     &:focus {
         border-color: $color-link-focus;
     }
+    &:focus:not(:focus-visible) {
+        border-color: $color-border;
+    }
     &:disabled {
         border-color: $color-border;
         background: $color-bg-tint;
@@ -40,6 +43,11 @@ textarea {
     &:hover, &:focus {
         border-color: mix($color, $color-focus, 50%);
         background: mix($color, $color-focus, 50%);
+        color: $color-contrast;
+    }
+    &:focus:not(:focus-visible) {
+        border-color: $color;
+        background: $color;
         color: $color-contrast;
     }
     &:active {
