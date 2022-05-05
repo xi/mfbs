@@ -1,17 +1,22 @@
-@viewport {
-  width: device-width; }
-
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-img {
-  max-width: 100%; }
+[hidden] {
+  display: none !important;
+}
+
+img,
+video {
+  max-width: 100%;
+}
 
 p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
   margin-top: 0;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 
 html {
   overflow-y: scroll;
@@ -19,145 +24,183 @@ html {
   color: #333;
   font-size: 1.2em;
   font-family: sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+}
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin-bottom: 0.8rem;
-  margin-top: 0; }
-  * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
-    margin-top: 1.5em; }
+  margin-top: 0;
+}
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: 1.5em;
+}
 
-a {
+:link {
   color: #26c;
-  text-decoration: underline; }
-  a:hover, a:focus, a:active {
-    color: #2b4d80; }
+  text-decoration: underline;
+}
+:link:hover, :link:focus, :link:active {
+  color: #2b4d80;
+}
+:link:focus:not(:focus-visible) {
+  color: #26c;
+}
 
-a:not([href]) {
-  color: inherit;
-  text-decoration: inherit; }
-  a:not([href]):hover, a:not([href]):focus, a:not([href]):active {
-    color: inherit; }
-
-*::selection {
-  background: #26c;
-  color: #fff; }
+:visited {
+  color: #26c;
+}
+:visited:hover, :visited:focus, :visited:active {
+  color: #2b4d80;
+}
+:visited:focus:not(:focus-visible) {
+  color: #26c;
+}
 
 hr {
   border: 0;
-  border-bottom: 1px solid #adadad;
-  margin: 1em 0; }
+  border-bottom: 1px solid #8f8f8f;
+  margin: 1em 0;
+}
 
 pre, code {
   font-size: 90%;
   font-family: monospace;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+}
 
 code {
-  padding: 0 0.25em; }
+  padding: 0 0.25em;
+}
 
 pre {
   padding: 0.5em;
   overflow: auto;
-  border: 1px solid #adadad; }
-  pre code {
-    background: none;
-    font-size: 100%;
-    padding: 0; }
+  border: 1px solid #8f8f8f;
+}
+pre code {
+  background: none;
+  font-size: 100%;
+  padding: 0;
+}
 
 ol, ul {
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+}
 
 dt {
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 dd {
-  margin-left: 1.5rem; }
+  margin-left: 1.5rem;
+}
 
 blockquote {
   font-style: italic;
   margin-left: 1.5rem;
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 tr {
-  border-bottom: 1px solid #adadad; }
+  border-bottom: 1px solid #8f8f8f;
+}
 
 td, th {
   text-align: start;
   padding: 0.25em;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 textarea,
 select[multiple] {
-  resize: vertical; }
-
-fieldset {
-  border: 1px solid #adadad; }
+  resize: vertical;
+}
 
 sub, sup {
-  line-height: 0; }
+  line-height: 0;
+}
 
 @media print {
   html {
     background: transparent;
-    color: #000; }
-  h2, h3 {
-    page-break-after: avoid; } }
+    color: #000;
+  }
 
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}
 body {
   margin: 2em auto;
   max-width: 37em;
-  padding: 0 0.5em; }
+  padding: 0 0.5em;
+}
 
 html {
-  font-size: 2.5vw; }
-  @media (min-width: 48em) {
-    html {
-      font-size: 1.2em; } }
-  @media (max-width: 36em) {
-    html {
-      font-size: 0.9em; } }
+  font-size: 2.5vw;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 36em) {
+  html {
+    font-size: 0.9em;
+  }
+}
 
 label {
-  display: block; }
+  display: block;
+}
 
-input,
-textarea,
-select, .button,
+.button,
 button,
 [type=button],
-[type=submit] {
-  border: 1px solid #adadad;
+[type=submit], input,
+textarea,
+select {
+  border: 1px solid #8f8f8f;
   padding: 0.3em 0.75em;
   font-family: inherit;
-  font-size: inherit; }
+  font-size: inherit;
+  line-height: 1.8;
+}
 
 input,
 textarea,
 select {
   background: #fff;
-  color: #333; }
-  input:focus,
-  textarea:focus,
-  select:focus {
-    border-color: #2b4d80; }
-  input:-moz-ui-invalid,
-  textarea:-moz-ui-invalid,
-  select:-moz-ui-invalid {
-    border-color: red;
-    color: red; }
-  input:disabled,
-  textarea:disabled,
-  select:disabled {
-    border-color: #adadad;
-    background: whitesmoke;
-    color: #adadad;
-    cursor: not-allowed; }
+  color: #333;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2b4d80;
+}
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  border-color: #8f8f8f;
+}
+input:disabled,
+textarea:disabled,
+select:disabled {
+  border-color: #8f8f8f;
+  background: whitesmoke;
+  color: #8f8f8f;
+  cursor: not-allowed;
+}
+
+textarea {
+  line-height: inherit;
+}
 
 .button,
 button,
@@ -166,40 +209,55 @@ button,
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  line-height: 1.8;
   text-align: center;
   border-radius: 0.3em;
   border-color: #26c;
   background: #26c;
-  color: #fff; }
-  .button:hover, .button:focus,
-  button:hover,
-  button:focus,
-  [type=button]:hover,
-  [type=button]:focus,
-  [type=submit]:hover,
-  [type=submit]:focus {
-    border-color: #275aa6;
-    background: #275aa6;
-    color: #fff; }
-  .button:active,
-  button:active,
-  [type=button]:active,
-  [type=submit]:active {
-    border-color: #2b4d80;
-    background: #2b4d80;
-    color: #fff; }
-  .button:disabled,
-  button:disabled,
-  [type=button]:disabled,
-  [type=submit]:disabled {
-    border-color: #91b3e6;
-    background: #91b3e6;
-    color: #e9f0fa;
-    cursor: not-allowed; }
+  color: #fff;
+}
+.button:hover, .button:focus,
+button:hover,
+button:focus,
+[type=button]:hover,
+[type=button]:focus,
+[type=submit]:hover,
+[type=submit]:focus {
+  border-color: #275aa6;
+  background: #275aa6;
+  color: #fff;
+}
+.button:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+[type=button]:focus:not(:focus-visible),
+[type=submit]:focus:not(:focus-visible) {
+  border-color: #26c;
+  background: #26c;
+  color: #fff;
+}
+.button:active,
+button:active,
+[type=button]:active,
+[type=submit]:active {
+  border-color: #2b4d80;
+  background: #2b4d80;
+  color: #fff;
+}
+.button:disabled,
+button:disabled,
+[type=button]:disabled,
+[type=submit]:disabled {
+  border-color: #91b3e6;
+  background: #91b3e6;
+  color: #e9f0fa;
+  cursor: not-allowed;
+}
 
 html {
-  font-family: serif; }
+  font-family: serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
+
+/*# sourceMappingURL=example.css.map */
