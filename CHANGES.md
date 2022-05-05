@@ -1,3 +1,10 @@
+5.1.0 (2022-05-06)
+------------------
+
+-   use same colors for `:link` and `:visited` by default
+-   fix deprecation warning about devision syntax
+
+
 5.0.0 (2021-07-15)
 ------------------
 
