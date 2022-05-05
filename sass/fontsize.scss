@@ -1,11 +1,11 @@
 html {
     font-size: 2.5vw;
 
-    @media (min-width: ($font-size-max * 100 / 2.5)) {
+    @media (min-width: ($font-size-max * 40)) {
         font-size: $font-size-max;
     }
 
-    @media (max-width: ($font-size-min * 100 / 2.5)) {
+    @media (max-width: ($font-size-min * 40)) {
         font-size: $font-size-min;
     }
 }
