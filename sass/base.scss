@@ -41,22 +41,16 @@ h1, h2, h3, h4, h5, h6 {
     color: $color-link;
     text-decoration: underline;
 
-    &:hover, &:focus, &:active {
+    &:hover, &:focus-visible, &:active {
         color: $color-link-focus;
-    }
-    &:focus:not(:focus-visible) {
-        color: $color-link;
     }
 }
 
 :visited {
     color: $color-link-visited;
 
-    &:hover, &:focus, &:active {
+    &:hover, &:focus-visible, &:active {
         color: $color-link-visited-focus;
-    }
-    &:focus:not(:focus-visible) {
-        color: $color-link-visited;
     }
 }
 
