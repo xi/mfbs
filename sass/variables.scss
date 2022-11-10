@@ -5,9 +5,7 @@ $color-fg: #333 !default;
 $color-bg-tint: mix($color-bg, $color-fg, 95%) !default;
 $color-border: mix($color-bg, $color-fg, 45%) !default;
 $color-link: #26c !default;
-$color-link-visited: $color-link !default;
 $color-link-focus: mix($color-link, $color-fg, 50%) !default;
-$color-link-visited-focus: $color-link-focus !default;
 
 // lengths
 $font-size-min: 0.9em !default;
