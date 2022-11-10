@@ -25,6 +25,7 @@ html {
   font-size: 1.2em;
   font-family: sans-serif;
   line-height: 1.5;
+  accent-color: #26c;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,21 +41,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #26c;
   text-decoration: underline;
 }
-:link:hover, :link:focus, :link:active {
+:link:hover, :link:focus-visible, :link:active {
   color: #2b4d80;
-}
-:link:focus:not(:focus-visible) {
-  color: #26c;
-}
-
-:visited {
-  color: #26c;
-}
-:visited:hover, :visited:focus, :visited:active {
-  color: #2b4d80;
-}
-:visited:focus:not(:focus-visible) {
-  color: #26c;
 }
 
 hr {
@@ -179,15 +167,10 @@ select {
   background: #fff;
   color: #333;
 }
-input:focus,
-textarea:focus,
-select:focus {
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
   border-color: #2b4d80;
-}
-input:focus:not(:focus-visible),
-textarea:focus:not(:focus-visible),
-select:focus:not(:focus-visible) {
-  border-color: #8f8f8f;
 }
 input:disabled,
 textarea:disabled,
@@ -215,23 +198,15 @@ button,
   background: #26c;
   color: #fff;
 }
-.button:hover, .button:focus,
+.button:hover, .button:focus-visible,
 button:hover,
-button:focus,
+button:focus-visible,
 [type=button]:hover,
-[type=button]:focus,
+[type=button]:focus-visible,
 [type=submit]:hover,
-[type=submit]:focus {
+[type=submit]:focus-visible {
   border-color: #275aa6;
   background: #275aa6;
-  color: #fff;
-}
-.button:focus:not(:focus-visible),
-button:focus:not(:focus-visible),
-[type=button]:focus:not(:focus-visible),
-[type=submit]:focus:not(:focus-visible) {
-  border-color: #26c;
-  background: #26c;
   color: #fff;
 }
 .button:active,

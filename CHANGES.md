@@ -1,3 +1,11 @@
+5.2.0 (2022-11-10)
+------------------
+
+-   rm compatibility code for browsers that do not support `:focus-visible`
+-   rm `:visited` styling
+-   use `accent-color` to style browser widgets (e.g. checkboxes)
+
+
 5.1.0 (2022-05-06)
 ------------------
 
