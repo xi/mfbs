@@ -4,7 +4,8 @@ label {
 
 %inputBase {
     border: 1px solid $color-border;
-    padding: 0.3em 0.75em;
+    padding-block: 0.3em;
+    padding-inline: 0.75em;
     font-family: inherit;
     font-size: inherit;
     line-height: 1.8;

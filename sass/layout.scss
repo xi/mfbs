@@ -1,5 +1,7 @@
 body {
-    margin: 2em auto;
-    max-width: $width;
-    padding: 0 $padding;
+    margin-block: 2em;
+    margin-inline: auto;
+    max-inline-size: $width;
+    padding-block: 0;
+    padding-inline: $padding;
 }
