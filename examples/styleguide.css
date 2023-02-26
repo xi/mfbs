@@ -1,0 +1,41 @@
+body {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+main {
+  width: 66%;
+}
+.page-nav {
+  width: 30%;
+  float: right;
+}
+.page-nav ul {
+  list-style: none;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  padding: 1em;
+  padding-left: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.example {
+  border: 2px solid silver;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  border-radius: 0.5em;
+}
+.example--code {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: 0;
+}
+pre.example-code {
+  border: 2px solid silver;
+  border-top: 0;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  margin: 0 0 2em;
+  padding: 0.5em;
+}
