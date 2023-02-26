@@ -10,12 +10,11 @@
 
 img,
 video {
-  max-width: 100%;
+  max-inline-size: 100%;
 }
 
 p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
-  margin-top: 0;
-  margin-bottom: 1em;
+  margin-block: 0 1em;
 }
 
 html {
@@ -30,25 +29,28 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  margin-bottom: 0.8rem;
-  margin-top: 0;
+  margin-block: 0 0.8rem;
 }
 * + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
-  margin-top: 1.5em;
+  margin-block-start: 1.5em;
 }
 
-:link {
+:link,
+:visited {
   color: #26c;
   text-decoration: underline;
 }
-:link:hover, :link:focus-visible, :link:active {
+:link:hover, :link:focus-visible, :link:active,
+:visited:hover,
+:visited:focus-visible,
+:visited:active {
   color: #2b4d80;
 }
 
 hr {
   border: 0;
-  border-bottom: 1px solid #8f8f8f;
-  margin: 1em 0;
+  border-block-end: 1px solid #8f8f8f;
+  margin-block: 1em;
 }
 
 pre, code {
@@ -58,7 +60,7 @@ pre, code {
 }
 
 code {
-  padding: 0 0.25em;
+  padding-inline: 0.25em;
 }
 
 pre {
@@ -73,7 +75,7 @@ pre code {
 }
 
 ol, ul {
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 dt {
@@ -81,13 +83,12 @@ dt {
 }
 
 dd {
-  margin-left: 1.5rem;
+  margin-inline-start: 1.5rem;
 }
 
 blockquote {
   font-style: italic;
-  margin-left: 1.5rem;
-  margin-right: 0;
+  margin-inline: 1.5rem 0;
 }
 
 table {
@@ -125,9 +126,11 @@ sub, sup {
   }
 }
 body {
-  margin: 2em auto;
-  max-width: 37em;
-  padding: 0 0.5em;
+  margin-block: 2em;
+  margin-inline: auto;
+  max-inline-size: 37em;
+  padding-block: 0;
+  padding-inline: 0.5em;
 }
 
 html {
@@ -155,7 +158,8 @@ button,
 textarea,
 select {
   border: 1px solid #8f8f8f;
-  padding: 0.3em 0.75em;
+  padding-block: 0.3em;
+  padding-inline: 0.75em;
   font-family: inherit;
   font-size: inherit;
   line-height: 1.8;
