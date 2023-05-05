@@ -18,7 +18,7 @@ p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
 }
 
 html {
-    overflow-block: scroll;
+    overflow-y: scroll;
     background-color: $color-bg;
     color: $color-fg;
     font-size: $font-size-max;
@@ -102,7 +102,7 @@ td, th {
 
 textarea,
 select[multiple] {
-    resize: block;
+    resize: vertical;
 }
 
 // Prevent sub and sup affecting line-height.
