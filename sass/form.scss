@@ -69,3 +69,20 @@ button,
 
     @include button-color($color-link, $color-bg, $color-link-focus);
 }
+
+input[type="file"]::file-selector-button {
+    @extend %inputBase;
+    background: $color-bg-tint;
+    color: $color-fg;
+    border: 0;
+    cursor: pointer;
+
+    margin-block: -0.3em;
+    margin-inline: -0.75em 0.75em;
+    border-inline-end: 1px solid $color-border;
+}
+input[type="file"]:disabled::file-selector-button {
+    background: transparent;
+    color: inherit;
+    cursor: not-allowed;
+}
