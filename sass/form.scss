@@ -33,10 +33,17 @@ textarea {
     line-height: inherit;
 }
 
-@mixin color-link($amount) {
-    border-color: mix($color-link, $color-link-focus, $amount);
-    background: mix($color-link, $color-link-focus, $amount);
-    color: $color-bg;
+@keyframes color-link {
+    from {
+        border-color: $color-link;
+        background: $color-link;
+        color: $color-bg;
+    }
+    to {
+        border-color: $color-link-focus;
+        background: $color-link-focus;
+        color: $color-bg;
+    }
 }
 
 .button,
@@ -50,16 +57,16 @@ button,
     text-align: center;
     border-radius: 0.3em;
 
-    @inline color-link(0%);
+    animation: 100s color-link linear forwards paused;
 
     &:hover, &:focus-visible {
-        @inline color-link(50%);
+        animation-delay: -50s;
     }
     &:active {
-        @inline color-link(100%);
+        animation-delay: -100s;
     }
     &:disabled {
-        @inline color-link(0%);
+        animation-delay: 0s;
         opacity: 0.6;
         cursor: not-allowed;
     }
