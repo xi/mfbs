@@ -1,3 +1,8 @@
+:root {
+    --font-size-min: 0.9em;
+    --font-size-max: 1.2em;
+}
+
 html {
     font-size: clamp(var(--font-size-min), 2.5vi, var(--font-size-max));
 }

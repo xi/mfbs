@@ -6,8 +6,6 @@
     --color-link: #26c;
     --color-link-focus: #248;
 
-    --font-size-min: 0.9em;
-    --font-size-max: 1.2em;
     --padding: 0.5em;
     --spacer: 1em;
     --indentation: 1.5rem;
@@ -38,7 +36,6 @@ html {
     overflow-y: scroll;
     background-color: var(--color-bg);
     color: var(--color-fg);
-    font-size: var(--font-size-max);
     font-family: sans-serif;
     line-height: 1.5;
     accent-color: var(--color-link);
