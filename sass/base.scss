@@ -67,9 +67,7 @@ pre {
     border: 1px solid $color-border;
 
     code {
-        background: none;
-        font-size: 100%;
-        padding: 0;
+        all: revert;
     }
 }
 
