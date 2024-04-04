@@ -2,7 +2,12 @@ label {
     display: block;
 }
 
-%inputBase {
+input,
+textarea,
+select,
+.button,
+button,
+input[type="file"]::file-selector-button {
     border: 1px solid $color-border;
     padding-block: 0.3em;
     padding-inline: 0.75em;
@@ -14,7 +19,6 @@ label {
 input,
 textarea,
 select {
-    @extend %inputBase;
     background: $color-bg;
     color: $color-fg;
 
@@ -50,7 +54,6 @@ textarea {
 button,
 [type=button],
 [type=submit] {
-    @extend %inputBase;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
@@ -73,7 +76,6 @@ button,
 }
 
 input[type="file"]::file-selector-button {
-    @extend %inputBase;
     background: $color-bg-tint;
     color: $color-fg;
     border: 0;
