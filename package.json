@@ -2,12 +2,12 @@
   "name": "mfbs",
   "version": "5.3.0",
   "description": "mother fucking bootstrap - a minimal CSS framework",
-  "keywords": ["sass"],
+  "keywords": ["css"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xi/mfbs.git"
   },
-  "files": ["sass"],
+  "files": ["css"],
   "author": "Tobias Bengfort <tobias.bengfort@posteo.de>",
   "license": "GPL-2.0+"
 }
