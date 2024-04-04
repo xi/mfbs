@@ -49,9 +49,10 @@ textarea {
         color: $color-contrast;
     }
     &:disabled {
-        border-color: mix($color, $color-contrast, 50%);
-        background: mix($color, $color-contrast, 50%);
-        color: mix($color, $color-contrast, 10%);
+        border-color: $color;
+        background: $color;
+        color: $color-contrast;
+        opacity: 0.6;
         cursor: not-allowed;
     }
 }
