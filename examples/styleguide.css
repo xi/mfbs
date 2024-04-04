@@ -1,42 +1,57 @@
-body {
-  max-inline-size: 60em;
-  margin-block: 0;
-  margin-inline: auto;
-  padding: 0.5em;
+:root {
+    scroll-behavior: smooth;
+    scroll-padding-block: var(--spacer);
+    --width: 60em;
+    --padding: 1em;
 }
-main {
-  inline-size: 66%;
-}
-.page-nav {
-  inline-size: 30%;
-  float: right;
-}
+
 .page-nav ul {
-  list-style: none;
-  text-align: end;
-  position: fixed;
-  top: 0;
-  padding: 1em;
-  padding-inline-start: 0;
-  max-block-size: 100vb;
-  overflow-block: auto;
+    list-style: none;
+    text-align: end;
+    padding: 0;
 }
+
 .example {
-  border: 2px solid silver;
-  padding: 0.5em;
-  margin-block-end: 2em;
-  border-radius: 0.5em;
+    border: 1px solid var(--color-border);
+    padding: var(--padding);
+    margin-block-end: 2em;
+    border-radius: 0.5em;
 }
+
 .example--code {
-  border-end-start-radius: 0;
-  border-end-end-radius: 0;
-  margin-block-end: 0;
+    border-end-start-radius: 0;
+    border-end-end-radius: 0;
+    margin-block-end: 0;
 }
+
 pre.example-code {
-  border: 2px solid silver;
-  border-block-start: 0;
-  border-end-start-radius: 1em;
-  border-end-end-radius: 1em;
-  margin-block: 0 2em;
-  padding: 0.5em;
+    border: 1px solid var(--color-border);
+    border-block-start: 0;
+    margin-block: 0 2em;
+}
+
+@media (min-width: 40em) {
+    body {
+        display: grid;
+        grid-template-columns: 66% 33%;
+        gap: var(--padding);
+    }
+
+    main {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .page-nav {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .page-nav ul {
+        position: sticky;
+        inset-block: var(--spacer);
+        margin-block: var(--spacer);
+        max-block-size: 100vb;
+        overflow: auto;
+    }
 }
