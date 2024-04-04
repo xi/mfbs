@@ -21,16 +21,19 @@ textarea,
 select {
     background: var(--color-bg);
     color: var(--color-fg);
-
-    &:focus-visible {
-        border-color: var(--color-link-focus);
-    }
-    &:disabled {
-        border-color: var(--color-border);
-        background: var(--color-bg-tint);
-        color: var(--color-border);
-        cursor: not-allowed;
-    }
+}
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    border-color: var(--color-link-focus);
+}
+input:disabled,
+textarea:disabled,
+select:disabled {
+    border-color: var(--color-border);
+    background: var(--color-bg-tint);
+    color: var(--color-border);
+    cursor: not-allowed;
 }
 
 textarea {
@@ -59,20 +62,31 @@ button,
     cursor: pointer;
     text-align: center;
     border-radius: 0.3em;
-
     animation: 100s color-link linear forwards paused;
-
-    &:hover, &:focus-visible {
-        animation-delay: -50s;
-    }
-    &:active {
-        animation-delay: -100s;
-    }
-    &:disabled {
-        animation-delay: 0s;
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
+}
+.button:hover,
+.button:focus-visible,
+button:hover,
+button:focus-visible,
+[type=button]:hover,
+[type=button]:focus-visible,
+[type=submit]:hover,
+[type=submit]:focus-visible {
+    animation-delay: -50s;
+}
+.button:active,
+button:active,
+[type=button]:active,
+[type=submit]:active {
+    animation-delay: -100s;
+}
+.button:disabled,
+button:disabled,
+[type=button]:disabled,
+[type=submit]:disabled {
+    animation-delay: 0s;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 input[type="file"]::file-selector-button {

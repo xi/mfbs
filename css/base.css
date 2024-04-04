@@ -45,20 +45,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-block: 0 0.8rem;
     break-after: avoid;
-
-    * + & {
-        margin-block-start: calc(1.5 * var(--spacer));
-    }
+}
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+    margin-block-start: calc(1.5 * var(--spacer));
 }
 
 :link,
 :visited {
     color: var(--color-link);
     text-decoration: underline;
-
-    &:hover {
-        color: var(--color-link-focus);
-    }
+}
+:link:hover,
+:visited:hover {
+    color: var(--color-link-focus);
 }
 
 hr {
@@ -79,10 +78,9 @@ pre {
     padding: var(--padding);
     overflow: auto;
     border: 1px solid var(--color-border);
-
-    code {
-        all: revert;
-    }
+}
+pre code {
+    all: revert;
 }
 
 ol, ul {
