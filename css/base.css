@@ -44,6 +44,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-block: 0 0.8rem;
+    break-after: avoid;
 
     * + & {
         margin-block-start: calc(1.5 * var(--spacer));
@@ -126,9 +127,5 @@ sub, sup {
     html {
         background: transparent;
         color: #000;  /* Black prints faster */
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        break-after: avoid;
     }
 }
