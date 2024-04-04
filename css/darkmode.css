@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --color-bg: #111;
+        --color-fg: #fff;
+        --color-bg-tint: #222;
+        --color-border: #666;
+        --color-link: #28d;
+        --color-link-focus: #26c;
+    }
+}
