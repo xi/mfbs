@@ -15,17 +15,17 @@ video {
 }
 
 p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
-    margin-block: 0 $spacer;
+    margin-block: 0 var(--spacer);
 }
 
 html {
     overflow-y: scroll;
-    background-color: $color-bg;
-    color: $color-fg;
-    font-size: $font-size-max;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-size: var(--font-size-max);
     font-family: sans-serif;
     line-height: 1.5;
-    accent-color: $color-link;
+    accent-color: var(--color-link);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,38 +33,38 @@ h1, h2, h3, h4, h5, h6 {
     margin-block: 0 0.8rem;
 
     * + & {
-        margin-block-start: 1.5 * $spacer;
+        margin-block-start: calc(1.5 * var(--spacer));
     }
 }
 
 :link,
 :visited {
-    color: $color-link;
+    color: var(--color-link);
     text-decoration: underline;
 
     &:hover {
-        color: $color-link-focus;
+        color: var(--color-link-focus);
     }
 }
 
 hr {
     border: 0;
-    border-block-end: 1px solid $color-border;
-    margin-block: $spacer;
+    border-block-end: 1px solid var(--color-border);
+    margin-block: var(--spacer);
 }
 
 pre, code {
     font-size: 90%;
     font-family: monospace;
-    background-color: $color-bg-tint;
+    background-color: var(--color-bg-tint);
 }
 code {
     padding-inline: 0.25em;
 }
 pre {
-    padding: $padding;
+    padding: var(--padding);
     overflow: auto;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
 
     code {
         all: revert;
@@ -72,18 +72,18 @@ pre {
 }
 
 ol, ul {
-    padding-inline-start: $indentation;
+    padding-inline-start: var(--indentation);
 }
 dt {
     font-weight: bold;
 }
 dd {
-    margin-inline-start: $indentation;
+    margin-inline-start: var(--indentation);
 }
 
 blockquote {
     font-style: italic;
-    margin-inline: $indentation 0;
+    margin-inline: var(--indentation) 0;
 }
 
 table {
@@ -91,11 +91,11 @@ table {
     border-spacing: 0;
 }
 tr {
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid var(--color-border);
 }
 td, th {
     text-align: start;
-    padding: $padding * 0.5;
+    padding: calc(var(--padding) * 0.5);
     vertical-align: top;
 }
 

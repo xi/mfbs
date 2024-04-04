@@ -1,16 +1,17 @@
-// colors
+:root {
+    // colors
+    --color-bg: #fff;
+    --color-fg: #333;
+    --color-bg-tint: #f5f5f5;
+    --color-border: #888;
+    --color-link: #26c;
+    --color-link-focus: #248;
 
-$color-bg: #fff !default;
-$color-fg: #333 !default;
-$color-bg-tint: mix($color-bg, $color-fg, 95%) !default;
-$color-border: mix($color-bg, $color-fg, 45%) !default;
-$color-link: #26c !default;
-$color-link-focus: mix($color-link, $color-fg, 50%) !default;
-
-// lengths
-$font-size-min: 0.9em !default;
-$font-size-max: 1.2em !default;
-$padding: 0.5em !default;
-$spacer: 1em !default;
-$indentation: 1.5rem !default;
-$width: 37em !default;
+    // lengths
+    --font-size-min: 0.9em;
+    --font-size-max: 1.2em;
+    --padding: 0.5em;
+    --spacer: 1em;
+    --indentation: 1.5rem;
+    --width: 37em;
+}

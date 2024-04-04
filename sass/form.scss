@@ -8,7 +8,7 @@ select,
 .button,
 button,
 input[type="file"]::file-selector-button {
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     padding-block: 0.3em;
     padding-inline: 0.75em;
     font-family: inherit;
@@ -19,16 +19,16 @@ input[type="file"]::file-selector-button {
 input,
 textarea,
 select {
-    background: $color-bg;
-    color: $color-fg;
+    background: var(--color-bg);
+    color: var(--color-fg);
 
     &:focus-visible {
-        border-color: $color-link-focus;
+        border-color: var(--color-link-focus);
     }
     &:disabled {
-        border-color: $color-border;
-        background: $color-bg-tint;
-        color: $color-border;
+        border-color: var(--color-border);
+        background: var(--color-bg-tint);
+        color: var(--color-border);
         cursor: not-allowed;
     }
 }
@@ -39,14 +39,14 @@ textarea {
 
 @keyframes color-link {
     from {
-        border-color: $color-link;
-        background: $color-link;
-        color: $color-bg;
+        border-color: var(--color-link);
+        background: var(--color-link);
+        color: var(--color-bg);
     }
     to {
-        border-color: $color-link-focus;
-        background: $color-link-focus;
-        color: $color-bg;
+        border-color: var(--color-link-focus);
+        background: var(--color-link-focus);
+        color: var(--color-bg);
     }
 }
 
@@ -76,14 +76,14 @@ button,
 }
 
 input[type="file"]::file-selector-button {
-    background: $color-bg-tint;
-    color: $color-fg;
+    background: var(--color-bg-tint);
+    color: var(--color-fg);
     border: 0;
     cursor: pointer;
 
     margin-block: -0.3em;
     margin-inline: -0.75em 0.75em;
-    border-inline-end: 1px solid $color-border;
+    border-inline-end: 1px solid var(--color-border);
 }
 input[type="file"]:disabled::file-selector-button {
     background: transparent;
