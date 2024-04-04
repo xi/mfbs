@@ -1,11 +1,3 @@
 html {
-    font-size: 2.5vi;
-
-    @media (min-width: ($font-size-max * 40)) {
-        font-size: $font-size-max;
-    }
-
-    @media (max-width: ($font-size-min * 40)) {
-        font-size: $font-size-min;
-    }
+    font-size: clamp($font-size-min, 2.5vi, $font-size-max);
 }
