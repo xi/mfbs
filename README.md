@@ -6,9 +6,7 @@ I found that I started every new project with mostly the same CSS code. So
 instead of duplicating that code again and again, I distilled the base styles
 from several projects into this little library.
 
-It is written in [Sass](http://sass-lang.com/) and consists of variable
-definitions (`variables.scss`), some basic styling (`base.scss`) and some
-optional components.
+It consists of some basic styling (`base.css`) and some optional components.
 
 See how it looks
 [here](https://xi.github.io/mfbs/examples/motherfuckingwebsite.html) and

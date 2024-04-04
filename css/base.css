@@ -1,0 +1,137 @@
+:root {
+    --color-bg: #fff;
+    --color-fg: #333;
+    --color-bg-tint: #f5f5f5;
+    --color-border: #888;
+    --color-link: #26c;
+    --color-link-focus: #248;
+
+    --font-size-min: 0.9em;
+    --font-size-max: 1.2em;
+    --padding: 0.5em;
+    --spacer: 1em;
+    --indentation: 1.5rem;
+    --width: 37em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+img,
+video {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
+    margin-block: 0 var(--spacer);
+}
+
+html {
+    overflow-y: scroll;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-size: var(--font-size-max);
+    font-family: sans-serif;
+    line-height: 1.5;
+    accent-color: var(--color-link);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-block: 0 0.8rem;
+
+    * + & {
+        margin-block-start: calc(1.5 * var(--spacer));
+    }
+}
+
+:link,
+:visited {
+    color: var(--color-link);
+    text-decoration: underline;
+
+    &:hover {
+        color: var(--color-link-focus);
+    }
+}
+
+hr {
+    border: 0;
+    border-block-end: 1px solid var(--color-border);
+    margin-block: var(--spacer);
+}
+
+pre, code {
+    font-size: 90%;
+    font-family: monospace;
+    background-color: var(--color-bg-tint);
+}
+code {
+    padding-inline: 0.25em;
+}
+pre {
+    padding: var(--padding);
+    overflow: auto;
+    border: 1px solid var(--color-border);
+
+    code {
+        all: revert;
+    }
+}
+
+ol, ul {
+    padding-inline-start: var(--indentation);
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-inline-start: var(--indentation);
+}
+
+blockquote {
+    font-style: italic;
+    margin-inline: var(--indentation) 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr {
+    border-bottom: 1px solid var(--color-border);
+}
+td, th {
+    text-align: start;
+    padding: calc(var(--padding) * 0.5);
+    vertical-align: top;
+}
+
+textarea,
+select[multiple] {
+    resize: vertical;
+}
+
+/* Prevent sub and sup affecting line-height. */
+sub, sup {
+    line-height: 0;
+}
+
+@media print {
+    html {
+        background: transparent;
+        color: #000;  /* Black prints faster */
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        break-after: avoid;
+    }
+}
