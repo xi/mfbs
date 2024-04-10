@@ -1,8 +1,11 @@
 :root {
     scroll-behavior: smooth;
     scroll-padding-block: var(--spacer);
-    --width: 60em;
     --padding: 1em;
+}
+
+body {
+    max-inline-size: 60em;
 }
 
 .page-nav ul {
