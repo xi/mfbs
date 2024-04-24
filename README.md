@@ -14,20 +14,11 @@ See how it looks
 
 ## how to use it
 
-    // First, define your own variables
-    @import "variables";
+The code is plain CSS, so you can use it any way you want:
 
-    // Import basic styling and default variables
-    @import "mfbs/variables";
-    @import "mfbs/base";
-
-    // Optionally import some opinionated styling
-    @import "mfbs/form";
-
-    // Import your own components
-    @import "components/header";
-    @import "components/navigation";
-    @import "components/article";
+-   Reference the file you want using `<link rel="stylesheet" href="…"/>`
+-   Concatenate the files and you own code into a single big file.
+-   Or just read the code and copy the parts you like.
 
 ## features
 
@@ -36,7 +27,7 @@ See how it looks
 -   The default colors were carefully picked to look nice and satisfy minimum
     contrast requirements.
 -   Opinionated styling for buttons, layout, and some more things is available
-    in optional modules.
+    in additional modules.
 -   Base styles have low specificity, so they can easily be extended with
     custom components.
 -   The small set of variables is very focused and scales well for projects of
