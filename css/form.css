@@ -40,29 +40,19 @@ textarea {
     line-height: inherit;
 }
 
-@keyframes color-link {
-    from {
-        border-color: var(--color-link);
-        background: var(--color-link);
-        color: var(--color-bg);
-    }
-    to {
-        border-color: var(--color-link-focus);
-        background: var(--color-link-focus);
-        color: var(--color-bg);
-    }
-}
-
 .button,
 button,
 [type=button],
 [type=submit] {
+    --btn-bg: var(--color-link);
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     text-align: center;
     border-radius: 0.3em;
-    animation: 100s color-link linear forwards paused;
+    border-color: var(--btn-bg);
+    background: var(--btn-bg);
+    color: var(--color-bg);
 }
 .button:hover,
 .button:focus-visible,
@@ -72,19 +62,21 @@ button:focus-visible,
 [type=button]:focus-visible,
 [type=submit]:hover,
 [type=submit]:focus-visible {
-    animation-delay: -50s;
+    --btn-bg: color-mix(in oklch, var(--color-link), var(--color-link-focus));
 }
 .button:active,
 button:active,
 [type=button]:active,
 [type=submit]:active {
-    animation-delay: -100s;
+    --btn-bg: var(--color-link-focus);
 }
 .button:disabled,
 button:disabled,
 [type=button]:disabled,
 [type=submit]:disabled {
-    animation-delay: 0s;
+    border-color: var(--color-link);
+    background: var(--color-link);
+    color: var(--color-bg);
     opacity: 0.5;
     cursor: not-allowed;
 }
