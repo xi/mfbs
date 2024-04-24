@@ -1,3 +1,22 @@
+6.0.0 (unreleased)
+------------------
+
+-   mfbs has been ported from SCSS to CSS. Variables have been replaced by
+    custom properties.
+-   `$width`, `$font-size-min`, and `$font-size-max` have been removed. Just
+    set `body {max-inline-size}` or `:root {font-size}` directly.
+-   new optional module: darkmode.css
+-   add styling for ::file-selector-button
+-   Link style again uses `a` instead of `:link` (as before 5.0)
+-   Link color no longer changes on focus. The browser focus outline is
+    sufficient.
+-   Headings now use the `break-after` attribute to also avoid breaks in
+    contexts other than print (e.g. columns)
+-   fix: keep the aspect ratio of images and videos when used with the `width`
+    and `height` HTML attributes.
+-   fix: use flow-relative units for font-size in fontsize.css
+
+
 5.3.0 (2023-02-26)
 ------------------
 
