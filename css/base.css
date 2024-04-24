@@ -27,7 +27,7 @@ video {
     block-size: auto;
 }
 
-p, address, blockquote, pre, table, dl, ul, ol, figure, fieldset {
+p, address, blockquote, pre, table, dl, ul, ol, hr, figure, fieldset {
     margin-block: 0 var(--spacer);
 }
 
@@ -62,7 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 hr {
     border: 0;
     border-block-end: 1px solid var(--color-border);
-    margin-block: var(--spacer);
 }
 
 pre, code {
