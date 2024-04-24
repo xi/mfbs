@@ -49,13 +49,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-block-start: calc(1.5 * var(--spacer));
 }
 
-:link,
-:visited {
+a {
     color: var(--color-link);
     text-decoration: underline;
 }
-:link:hover,
-:visited:hover {
+a:hover {
     color: var(--color-link-focus);
 }
 
