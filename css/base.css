@@ -9,6 +9,13 @@
     --padding: 0.5em;
     --spacer: 1em;
     --indentation: 1.5rem;
+
+    overflow-y: scroll;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: sans-serif;
+    line-height: 1.5;
+    accent-color: var(--color-link);
 }
 
 *,
@@ -29,15 +36,6 @@ video {
 
 p, address, blockquote, pre, table, dl, ul, ol, hr, figure, fieldset {
     margin-block: 0 var(--spacer);
-}
-
-html {
-    overflow-y: scroll;
-    background-color: var(--color-bg);
-    color: var(--color-fg);
-    font-family: sans-serif;
-    line-height: 1.5;
-    accent-color: var(--color-link);
 }
 
 h1, h2, h3, h4, h5, h6 {
