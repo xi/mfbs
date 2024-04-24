@@ -121,8 +121,8 @@ sub, sup {
 }
 
 @media print {
-    html {
-        background: transparent;
-        color: #000;  /* Black prints faster */
+    :root {
+        --color-fg: #000;
+        --color-bg: #fff;
     }
 }
