@@ -44,15 +44,19 @@ textarea {
 button,
 [type=button],
 [type=submit] {
-    --btn-bg: var(--color-link);
+    --btn-color: var(--color-link);
+    --btn-focus: var(--color-link-focus);
+    --btn-contrast: var(--color-bg);
+    --btn-internal: var(--btn-color);
+
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     text-align: center;
     border-radius: 0.3em;
-    border-color: var(--btn-bg);
-    background: var(--btn-bg);
-    color: var(--color-bg);
+    border-color: var(--btn-internal);
+    background: var(--btn-internal);
+    color: var(--btn-contrast);
 }
 .button:hover,
 .button:focus-visible,
@@ -62,21 +66,21 @@ button:focus-visible,
 [type=button]:focus-visible,
 [type=submit]:hover,
 [type=submit]:focus-visible {
-    --btn-bg: color-mix(in oklch, var(--color-link), var(--color-link-focus));
+    --btn-internal: color-mix(in oklch, var(--btn-color), var(--btn-focus));
 }
 .button:active,
 button:active,
 [type=button]:active,
 [type=submit]:active {
-    --btn-bg: var(--color-link-focus);
+    --btn-internal: var(--btn-focus);
 }
 .button:disabled,
 button:disabled,
 [type=button]:disabled,
 [type=submit]:disabled {
-    border-color: var(--color-link);
-    background: var(--color-link);
-    color: var(--color-bg);
+    border-color: var(--btn-bg);
+    background: var(--btn-bg);
+    color: var(--btn-fg);
     opacity: 0.5;
     cursor: not-allowed;
 }
