@@ -67,12 +67,14 @@ button:focus-visible,
 [type=submit]:hover,
 [type=submit]:focus-visible {
     --btn-internal: color-mix(in oklch, var(--btn-color), var(--btn-focus));
+    color: var(--btn-contrast);
 }
 .button:active,
 button:active,
 [type=button]:active,
 [type=submit]:active {
     --btn-internal: var(--btn-focus);
+    color: var(--btn-contrast);
 }
 .button:disabled,
 button:disabled,
