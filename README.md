@@ -17,7 +17,7 @@ See how it looks
 The code is plain CSS, so you can use it any way you want:
 
 -   Reference the file you want using `<link rel="stylesheet" href="…"/>`
--   Concatenate the files and you own code into a single big file.
+-   Concatenate the files and your own code into a single big file.
 -   Or just read the code and copy the parts you like.
 
 ## features
