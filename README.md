@@ -1,4 +1,4 @@
-mfbs (motherfuckingbootstap) is a CSS microframework inspired by [twitter
+mfbs (motherfuckingbootstrap) is a CSS microframework inspired by [twitter
 bootstrap](https://getbootstrap.com/) and
 <http://bettermotherfuckingwebsite.com/>.
 
