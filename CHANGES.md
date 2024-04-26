@@ -1,12 +1,15 @@
-6.0.0 (unreleased)
+6.0.0 (2024-04-26)
 ------------------
 
--   mfbs has been ported from SCSS to CSS. Variables have been replaced by
-    custom properties.
+-   mfbs has been ported from SCSS to CSS.
+    -   Variables have been replaced by custom properties.
+    -   You can now use `--btn-color`, `--btn-focus` and `--btn-contrast`
+        instead of `@include button-color($color, $color-contrast,
+        $color-focus)` to customize button colors.
 -   `$width`, `$font-size-min`, and `$font-size-max` have been removed. Just
     set `body {max-inline-size}` or `:root {font-size}` directly.
 -   new optional module: darkmode.css
--   add styling for ::file-selector-button
+-   add styling for `::file-selector-button`
 -   Link style again uses `a` instead of `:link` (as before 5.0)
 -   Link color no longer changes on focus. The browser focus outline is
     sufficient.
