@@ -5,6 +5,7 @@
     --color-border: #888;
     --color-link: #26c;
     --color-link-focus: #248;
+    --color-shadow: #0005;
 
     --padding: 0.5em;
     --spacer: 1em;
@@ -113,6 +114,12 @@ select[multiple] {
 /* Prevent sub and sup affecting line-height. */
 sub, sup {
     line-height: 0;
+}
+
+dialog {
+    box-shadow: 0 0 0.5em var(--color-shadow);
+    border: 1px solid var(--color-border);
+    padding: var(--padding);
 }
 
 @media print {
