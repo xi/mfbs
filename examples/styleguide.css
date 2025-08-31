@@ -54,7 +54,7 @@ pre.example-code {
         position: sticky;
         inset-block: var(--spacer);
         margin-block: var(--spacer);
-        max-block-size: 100vb;
+        max-block-size: calc(100dvb - 2 * var(--spacer));
         overflow: auto;
     }
 }
