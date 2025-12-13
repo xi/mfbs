@@ -41,9 +41,7 @@ textarea {
 }
 
 .button,
-button,
-[type=button],
-[type=submit] {
+button {
     --btn-color: var(--color-link);
     --btn-focus: var(--color-link-focus);
     --btn-contrast: var(--color-bg);
@@ -61,25 +59,17 @@ button,
 .button:hover,
 .button:focus-visible,
 button:hover,
-button:focus-visible,
-[type=button]:hover,
-[type=button]:focus-visible,
-[type=submit]:hover,
-[type=submit]:focus-visible {
+button:focus-visible {
     --btn-internal: color-mix(in oklch, var(--btn-color), var(--btn-focus));
     color: var(--btn-contrast);
 }
 .button:active,
-button:active,
-[type=button]:active,
-[type=submit]:active {
+button:active {
     --btn-internal: var(--btn-focus);
     color: var(--btn-contrast);
 }
 .button:disabled,
-button:disabled,
-[type=button]:disabled,
-[type=submit]:disabled {
+button:disabled {
     border-color: var(--btn-bg);
     background: var(--btn-bg);
     color: var(--btn-fg);
